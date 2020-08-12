@@ -1,9 +1,16 @@
 import * as React from "react";
-import * as ScreenInterface from "./screenInterface";
+import { Props, State, ScreenInterface } from "./screenInterface";
 
-export class WaitScreen extends React.Component<ScreenInterface.Props, ScreenInterface.State> {
+export class WaitScreen
+    extends React.Component<Props, State>
+    implements ScreenInterface {
+
     render(): React.ReactNode {
         return <h1>Hello World!</h1>
+    }
+
+    handleMessage(msg: any) {
+        
     }
 }
 

@@ -12,8 +12,14 @@
     "moduleResolution": "node",
     "strict": true,
     "alwaysStrict": true,
+    "baseUrl": "./src/",
+    "paths": {},
     "strictNullChecks": false,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./src/types/"
+    ]
   },
   "include": [
     "./src/"

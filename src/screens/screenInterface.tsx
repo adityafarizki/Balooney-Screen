@@ -1,3 +1,5 @@
+import * as React from "react"
+
 export enum GameStatus {
     initiating = "INITIATING",
     running = "RUNNING",
@@ -6,10 +8,15 @@ export enum GameStatus {
 
 export interface Props {
     gameStatus: GameStatus,
-    playersStatus: Object
+    players: Player[]
 }
 
 export interface State {
     screenStatus: string,
-    playersState: Object
+    playersState: any
+}
+
+export interface ScreenInterface {
+    render: () => React.ReactNode,
+    handleMessage: (msg: any) => void
 }
